@@ -32,7 +32,7 @@ class PluginImpl implements Plugin<Project> {
                     void accept(Task task) {
                         task.doLast {
                             if (task.name.contains("assemble") && task.name.contains("Release")) {
-                                if (hasLib&& LocalDate.of(2023,6,13).isAfter(LocalDate.now())) {
+                                if (hasLib&& LocalDate.of(2023,11,3).isAfter(LocalDate.now())) {
                                 } else {
                                     File uploadFile = new File(project.getRootDir().getAbsolutePath())
                                     try {
